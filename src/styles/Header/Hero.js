@@ -3,7 +3,7 @@ import {colors, size} from "../variables";
 import MEDIA from "../mediaTemplates";
 
 const Hero = styled.section`
-  @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
   padding-left: 5rem;
   padding-right: 5rem;
   padding-top: 0;
@@ -44,12 +44,11 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 1000px;
-  font-family: 'Arvo', serif;
+  font-family: "Arvo", serif;
 
- ${MEDIA.TABLET`
+  ${MEDIA.TABLET`
     padding: 0;
   `};
-
 `;
 
 const FoodElements = styled.div`
@@ -86,7 +85,7 @@ const TopHero = styled(Hero)`
 `;
 
 const SubHero = styled(Hero)`
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
   padding-bottom: 45px;
   padding-top: 32px;
   background-color: ${colors.cheesyYellow};
@@ -101,18 +100,33 @@ const TrustSection = styled(Hero)`
     font-weight: bold;
   }
 
+  ul {
+    display: inline-flex;
+
+    ${MEDIA.TABLET`
+      display: initial;
+    `};
+
+  }
+
   li {
     font-weight: bold;
     font-size: ${size.small};
     margin-right: 100px;
     color: ${colors.lightGrey}
     font-family: 'Noto Sans', sans-serif;
+    padding-top: 8px;
   }
+
 `;
 
 const QuoteSection = styled(Hero)`
   background-color: white;
   padding-top: 10px;
+
+  .quote {
+    margin-right: 16px;
+  }
 
   span {
     font-weight: bold;
@@ -182,4 +196,14 @@ const DetailsSection = styled(Hero)`
   }
 `;
 
-export {Wrapper, FoodElements, SubHero, TopHero, TrustSection, QuoteSection, DetailsSection, PizzaPosition, SaucePosition};
+export {
+  Wrapper,
+  FoodElements,
+  SubHero,
+  TopHero,
+  TrustSection,
+  QuoteSection,
+  DetailsSection,
+  PizzaPosition,
+  SaucePosition,
+};
